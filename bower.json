@@ -1,0 +1,27 @@
+{
+  "name": "ng-step",
+  "version": "0.0.1",
+  "authors": [
+    "alvarowolfx <alvarowolfx@gmail.com>"
+  ],
+  "description": "A step by step progress component build with angular.js",
+  "main": [
+    "./dist/ng-step.min.js",
+    "./dist/ng-step.css"
+  ],
+  "keywords": [
+    "angular",
+    "component",
+    "step",
+    "progress"
+  ],
+  "license": "MIT",
+  "homepage": "github.com/alvarowolfx/ng-step",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

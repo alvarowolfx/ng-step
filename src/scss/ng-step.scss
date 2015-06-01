@@ -1,0 +1,96 @@
+
+/* COLORS */
+$corn-colored: #FAA945;
+$saffron: #F4D03F;
+$amber: #CA6924;
+$porcelain: #ECF0F1;
+$green-bamboo: #006442;
+$young-green-bamboo: #6B9362;
+
+/* Step item size */
+$step-item-size: 3em;
+$step-item-font-size: 1em;
+$step-item-line-height: $step-item-size/20;
+$step-item-distance: 2em;
+
+/* Apply colors to step items */
+$step-item-active-color: $green-bamboo;
+$step-item-color: $young-green-bamboo;
+$step-item-inative-color: white;
+$step-item-text-color: white;
+$step-item-active-text-color: $porcelain;
+
+.step-item {
+    width: $step-item-size;
+    height: $step-item-size;
+    border-radius: $step-item-size/2;
+    background: $step-item-active-color;
+    margin: 0 $step-item-distance/2;
+    display: inline-block;    
+    position: relative;
+    
+    text-align: center;
+    font-size: $step-item-font-size;
+    line-height: $step-item-size;    
+    color: $step-item-active-text-color;              
+}
+
+.step-item:hover {
+    cursor: pointer; 
+    cursor: hand;
+}
+
+.step-item::before{
+    content: '';
+    position: absolute;
+    top: ($step-item-size - $step-item-line-height)/2;
+    left: $step-item-distance * -1;
+    width: $step-item-distance;
+    height: $step-item-line-height;
+    background: $step-item-active-color;
+    z-index: -1;           
+}
+
+.step-item:first-child::before {
+    display: none
+}
+
+.active {
+    background: $step-item-active-color;
+}
+
+.active ~ .step-item {
+    background: $step-item-inative-color;
+    box-shadow: none;
+    color: $step-item-color;
+    box-shadow:0px 0px 0px 2px $step-item-color inset;
+}
+
+.active ~ .step-item::before {
+    background: $step-item-color;
+    z-index: -2;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+    z-index: -1;
+  }
+
+  50% {
+    $proportion: 1.5;
+    transform: scale3d($proportion,$proportion, $proportion);
+    z-index: -1;
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+    z-index: -1;
+  }
+}
+
+.step-animation {
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-name: pulse;
+}

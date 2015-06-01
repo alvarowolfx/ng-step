@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ngStep - A step by step progress component</title>  
+    <link rel="stylesheet" type="text/css" href="../dist/ng-step.min.css">
+</head>
+<body ng-app='app'>
+    <div ng-controller='StepController as vm'>
+        <center>
+            <br/>
+            <ng-step config='vm.stepConfig'></ng-step>
+            <span>
+                Current Step: {{vm.stepConfig.steps[vm.stepConfig.currentStep]}}
+            </span> 
+            <br/>
+            <button ng-click="vm.back()">Back</button>
+            <button ng-click="vm.forward()">Next</button>            
+        </center>
+    </div>
+    
+    <script type="text/javascript" src="angular.js"></script>  
+    <script type="text/javascript" src="../dist/ng-step.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
