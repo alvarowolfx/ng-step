@@ -1,5 +1,5 @@
 {
-  "name": "ng-step",
+  "name": "ngStep",
   "version": "0.0.1",
   "authors": [
     "alvarowolfx <alvarowolfx@gmail.com>"
@@ -13,6 +13,9 @@
   ],
   "license": "MIT",
   "homepage": "github.com/alvarowolfx/ng-step",
+  "repository": {
+    "url": "git://github.com/alvarowolfx/ng-step.git"
+  },
   "ignore": [
     "**/.*",
     "node_modules",

@@ -6,6 +6,6 @@
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-Don't edit files under `dist` folder, those are generated after running `gulp build` command, edit files under `src` folder instead.
+Don't edit files under `dist` folder, those are generated after running `gulp` command, edit files under `src` folder instead.
 
 Also remember to follow the [style guide](https://github.com/johnpapa/angular-styleguide).
