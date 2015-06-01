@@ -44,20 +44,42 @@
   background: #6B9362;
   z-index: -2; }
 
-@keyframes pulse {
+@-webkit-keyframes pulse {
   0% {
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
     z-index: -1; }
 
   50% {
-    transform: scale3d(1.5, 1.5, 1.5);
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+            transform: scale3d(1.5, 1.5, 1.5);
     z-index: -1; }
 
   100% {
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    z-index: -1; } }
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    z-index: -1; }
+
+  50% {
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+            transform: scale3d(1.5, 1.5, 1.5);
+    z-index: -1; }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
     z-index: -1; } }
 
 .step-animation {
-  animation-duration: .5s;
-  animation-fill-mode: both;
-  animation-name: pulse; }
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: pulse;
+          animation-name: pulse; }
