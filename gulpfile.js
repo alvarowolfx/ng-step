@@ -6,6 +6,7 @@ var minifyCss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var ghPages = require('gulp-gh-pages');
+var autoPrefixer = require('gulp-autoprefixer');
  
 var paths = {
   sass: ['./src/**/*.scss'],
@@ -16,6 +17,7 @@ gulp.task('sass', function(done) {
   gulp.src('./src/scss/ng-step.scss')
     .pipe(plumber())
     .pipe(sass())
+    .pipe(autoPrefixer())
     .pipe(gulp.dest('./dist/'))
     .pipe(minifyCss({
       keepSpecialComments: 0
@@ -36,7 +38,7 @@ gulp.task('scripts',function(done){
         .pipe(gulp.dest('./dist/'))
         .pipe(gulp.dest('./demo/lib/'))
         .on('end', done);
-})
+});
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
