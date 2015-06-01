@@ -5,7 +5,8 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-
+var ghPages = require('gulp-gh-pages');
+ 
 var paths = {
   sass: ['./src/**/*.scss'],
   js:['./src/**/*.js']
@@ -40,6 +41,11 @@ gulp.task('scripts',function(done){
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
   gulp.watch(paths.js, ['scripts']);
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./demo/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('default', ['sass','scripts']);
