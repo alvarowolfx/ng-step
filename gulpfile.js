@@ -21,17 +21,20 @@ gulp.task('sass', function(done) {
     }))
     .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest('./dist/'))
+    .pipe(gulp.dest('./demo/lib/'))
     .on('end', done);
 });
 
-gulp.task('scripts',function(){
-  return gulp.src(paths.js)
+gulp.task('scripts',function(done){
+  gulp.src(paths.js)
         .pipe(plumber())
         .pipe(concat('ng-step.js'))
         .pipe(gulp.dest('./dist/'))
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./dist/'))
+        .pipe(gulp.dest('./demo/lib/'))
+        .on('end', done);
 })
 
 gulp.task('watch', function() {
