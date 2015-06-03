@@ -1,6 +1,7 @@
-/* COLORS */
+/* Colors */
+/* Active Item */
+/* Normal Item*/
 /* Step item size */
-/* Apply colors to step items */
 .step-item {
   width: 3em;
   height: 3em;
@@ -35,13 +36,12 @@
   background: #006442; }
 
 .active ~ .step-item {
-  background: white;
-  box-shadow: none;
-  color: #6B9362;
-  box-shadow: 0px 0px 0px 2px #6B9362 inset; }
+  background: #FFF;
+  color: #009764;
+  box-shadow: 0px 0px 0px 2px #009764 inset; }
 
 .active ~ .step-item::before {
-  background: #6B9362;
+  background: #FFF;
   z-index: -2; }
 
 @-webkit-keyframes pulse {
