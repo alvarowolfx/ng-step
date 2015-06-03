@@ -1,24 +1,4 @@
-
-/* COLORS */
-$corn-colored: #FAA945;
-$saffron: #F4D03F;
-$amber: #CA6924;
-$porcelain: #ECF0F1;
-$green-bamboo: #006442;
-$young-green-bamboo: #6B9362;
-
-/* Step item size */
-$step-item-size: 3em;
-$step-item-font-size: 1em;
-$step-item-line-height: $step-item-size/20;
-$step-item-distance: 2em;
-
-/* Apply colors to step items */
-$step-item-active-color: $green-bamboo;
-$step-item-color: $young-green-bamboo;
-$step-item-inative-color: white;
-$step-item-text-color: white;
-$step-item-active-text-color: $porcelain;
+@import '_variables';
 
 .step-item {
     width: $step-item-size;
@@ -60,10 +40,9 @@ $step-item-active-text-color: $porcelain;
 }
 
 .active ~ .step-item {
-    background: $step-item-inative-color;
-    box-shadow: none;
-    color: $step-item-color;
-    box-shadow:0px 0px 0px 2px $step-item-color inset;
+    background: $step-item-color;
+    color: $step-item-text-color;
+    box-shadow: 0px 0px 0px 2px $step-item-border-color inset;
 }
 
 .active ~ .step-item::before {
