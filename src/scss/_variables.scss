@@ -1,0 +1,15 @@
+/* Colors */
+/* Active Item */
+$step-item-active-color: #006442;
+$step-item-active-text-color: #ECF0F1;
+
+/* Normal Item*/
+$step-item-color: #FFF;
+$step-item-text-color: lighten($step-item-active-color, 10%);
+$step-item-border-color: $step-item-text-color;
+
+/* Step item size */
+$step-item-size: 3em;
+$step-item-font-size: 1em;
+$step-item-line-height: $step-item-size/20;
+$step-item-distance: 2em;
